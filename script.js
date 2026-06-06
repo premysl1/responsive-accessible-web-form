@@ -226,10 +226,10 @@ form.addEventListener(`submit`, e => {
 
     if (currentLang === `cs`) {
         if (animal.value === `frog`) {
-            img.setAttribute(`src`, `./photos/frog.webp`);
+            img.setAttribute(`src`, `./images/frog.webp`);
             img.setAttribute(`alt`, `Žába zobrazená z boku, dívající se do dálky, sedící na něčem, co vypadá jako větev nebo zrezivělá ocelová tyč.`);
         } else if (animal.value === `chameleon`) {
-            img.setAttribute(`src`, `./photos/chameleon.webp`);
+            img.setAttribute(`src`, `./images/chameleon.webp`);
             img.setAttribute(`alt`, `Zelený chamelon šplhající po větvi.`);
         } else if (animal.value === `axolotl`) {
             img.setAttribute(`src`, `./photos/axolotl.webp`);
@@ -237,13 +237,13 @@ form.addEventListener(`submit`, e => {
         }
     } else {
         if (animal.value === `frog`) {
-            img.setAttribute(`src`, `./photos/frog.webp`);
+            img.setAttribute(`src`, `./images/frog.webp`);
             img.setAttribute(`alt`, `Frog displayed from the side, looking into distance, sitting on what looks like a branch or a rusted steel rod.`);
         } else if (animal.value === `chameleon`) {
-            img.setAttribute(`src`, `./photos/chameleon.webp`);
+            img.setAttribute(`src`, `./images/chameleon.webp`);
             img.setAttribute(`alt`, `Green chameleon climbing along a branch.`);
         } else if (animal.value === `axolotl`) {
-            img.setAttribute(`src`, `./photos/axolotl.webp`);
+            img.setAttribute(`src`, `./images/axolotl.webp`);
             img.setAttribute(`alt`, `Pink axolotl in an aquarium.`);
         }
     }
