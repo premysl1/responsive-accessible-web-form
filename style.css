@@ -43,12 +43,11 @@ fieldset
 
 /*boilerplate end*/
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-mode: light) {
     body {
-        background-color: var(--clr-bg-ligth);
+        background-color: var(--clr-bg-light);
         color: black;
     }
-
 }
 
 :root {
@@ -59,7 +58,7 @@ fieldset
     --clr-primary: rgb(250, 100, 30);
     --clr-secondary: white;
     --clr-bg: rgb(25, 25, 25);
-    --clr-bg-ligth: white;
+    --clr-bg-light: white;
     --clr-surface: rgb(50, 50, 50);
     --clr-ui: rgb(88, 88, 88);
 }
@@ -152,7 +151,7 @@ h1 + fieldset
     gap: 0 1em;
 }
 
-h1 + fieldset .input-group:not(.span-two)
+h1 + fieldset .input-group:not(.one-column)
 {
     grid-column: 1 / -1;
 }
@@ -243,7 +242,7 @@ input:not(:placeholder-shown):invalid
 {
     padding: 2.5px;
 
-    background: var(--clr-bg-ligth);
+    background: var(--clr-bg-light);
 }
 
 .input-group.terms input
