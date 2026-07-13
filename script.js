@@ -116,7 +116,7 @@ function applyLanguage(lang)
     document.querySelector('label[for="color"]').textContent = t.labelColor;
     document.querySelector('label[for="form-rating"]').textContent = t.labelRating;
 
-    document.querySelector('.questionnaire label').textContent = t.pickAnimal;
+    document.querySelector('[for="pick-an-animal"]').textContent = t.pickAnimal;
 
     document.querySelector('select option[value=""]').textContent = t.optionDefault;
     document.querySelector('select option[value="frog"]').textContent = t.optionFrog;
