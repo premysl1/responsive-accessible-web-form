@@ -1,341 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 /*boilerplate start*/
 
-*, *::before, *::after
-{
-    box-sizing: border-box;
-    padding: 0;
-    
-    hyphens: auto;
-    text-wrap: pretty;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+
+  hyphens: auto;
+  text-wrap: pretty;
 }
 
-*:not(dialog)
-{
-    margin: 0;
+*:not(dialog) {
+  margin: 0;
 }
 
-audio, img, picture, svg, video, canvas, iframe, embed, object
-{
-    display: block;
-    max-width: 100%;
-    max-height: 100%;
+audio,
+img,
+picture,
+svg,
+video,
+canvas,
+iframe,
+embed,
+object {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
 }
 
-input, button, textarea, select, ul, li
-{
-    font: inherit;
+input,
+button,
+textarea,
+select,
+ul,
+li {
+  font: inherit;
 }
 
-fieldset
-{
-    border: none;
+fieldset {
+  border: none;
 }
 
-@media (prefers-reduced-motion: reduce)
-{
-    *, *::before, *::after
-    {
-        animation: none !important;
-        transition: none !important;
-        scroll-behavior: smooth;
-    }
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: smooth;
+  }
 }
 
 /*boilerplate end*/
 
 @media (prefers-color-mode: light) {
-    body {
-        background-color: var(--clr-bg-light);
-        color: black;
-    }
+  body {
+    background-color: var(--clr-bg-light);
+    color: black;
+  }
 }
 
 :root {
-    --clr-success: limegreen;
-    --clr-error: rgb(245, 8, 8);
-    --clr-warning: gold;
+  --clr-success: limegreen;
+  --clr-error: rgb(245, 8, 8);
+  --clr-warning: gold;
 
-    --clr-primary: rgb(250, 100, 30);
-    --clr-secondary: white;
-    --clr-bg: rgb(25, 25, 25);
-    --clr-bg-light: white;
-    --clr-surface: rgb(50, 50, 50);
-    --clr-ui: rgb(88, 88, 88);
+  --clr-primary: rgb(250, 100, 30);
+  --clr-secondary: white;
+  --clr-bg: rgb(25, 25, 25);
+  --clr-bg-light: white;
+  --clr-surface: rgb(50, 50, 50);
+  --clr-ui: rgb(88, 88, 88);
 }
 
-body
-{
-    background: var(--clr-bg);
-    color: white;
+body {
+  background: var(--clr-bg);
+  color: white;
 
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100 900;
+  font-style: normal;
 }
 
-header
-{
-    height: 3.5rem;
+header {
+  height: 3.5rem;
 
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    background: var(--clr-primary);
+  background: var(--clr-primary);
 }
 
-header > a
-{
-    height: 100%;
+header > a {
+  height: 100%;
 
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    padding: 0 7.5px;
-    margin: 0 auto 0 0;
+  padding: 0 7.5px;
+  margin: 0 auto 0 0;
 
-    background: var(--clr-secondary);
+  background: var(--clr-secondary);
 }
 
-header > button
-{
-    width: 2.75em;
-    height: 2.75em;
+header > button {
+  width: 2.75em;
+  height: 2.75em;
 
-    margin: 0.25em;
-    border: 0;
-    border-radius: 5px;
+  margin: 0.25em;
+  border: 0;
+  border-radius: 5px;
 
-    background: var(--clr-ui);
-    color: white;
+  background: var(--clr-ui);
+  color: white;
 
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
 }
 
 header > button:hover,
-dialog button:hover
-{
-    border: 0.25em solid var(--clr-surface);
+dialog button:hover {
+  border: 0.25em solid var(--clr-surface);
 }
 
 header > button:active,
-dialog button:active
-{
-    background: var(--clr-surface);
+dialog button:active {
+  background: var(--clr-surface);
 }
 
-main
-{
-    display: grid;
-    
+main {
+  display: grid;
 }
 
-form
-{
-    margin: 0 auto;
+form {
+  margin: 0 auto;
 }
 
-h1
-{
-    text-align: center;
-    margin: 0.5em 0;
+h1 {
+  text-align: center;
+  margin: 0.5em 0;
 }
 
-h1 + fieldset
-{
-    display: grid;
+h1 + fieldset {
+  display: grid;
 
-    @media (width > 500px)
-    {
-        grid-template-columns: 1fr 1fr;
-    }
+  @media (width > 500px) {
+    grid-template-columns: 1fr 1fr;
+  }
 
-    gap: 0 1em;
+  gap: 0 1em;
 }
 
-h1 + fieldset .input-group:not(.one-column)
-{
-    grid-column: 1 / -1;
+h1 + fieldset .input-group:not(.one-column) {
+  grid-column: 1 / -1;
 }
 
-h1 + fieldset .input-group
-{
-    display: grid;
+h1 + fieldset .input-group {
+  display: grid;
 }
 
-label:not(.radio .input-group label)
-{
-    margin: 0.25em 0;
+label:not(.radio .input-group label) {
+  margin: 0.25em 0;
 }
 
-fieldset legend
-{
-    padding: 0.5em 0;
-    
-    font-size: 1.25em;
+fieldset legend {
+  padding: 0.5em 0;
+
+  font-size: 1.25em;
 }
 
-.questionnaire legend ~ .radio legend
-{
-    padding: 0 0 0.5em 0;
+.questionnaire legend ~ .radio legend {
+  padding: 0 0 0.5em 0;
 
-    font-size: inherit;
+  font-size: inherit;
 }
 
-.questionnaire legend ~ .radio
-{
-    padding: 0 1em 0.5em 1em;
-    
-    border-color: var(--clr-primary);
-    border-style: inset;
+.questionnaire legend ~ .radio {
+  padding: 0 1em 0.5em 1em;
+
+  border-color: var(--clr-primary);
+  border-style: inset;
 }
 
-.questionnaire legend ~ .radio .input-group
-{
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
+.questionnaire legend ~ .radio .input-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
 }
 
-.radio textarea
-{
-    width: 100%;
+.radio textarea {
+  width: 100%;
 
-    resize: vertical;
+  resize: vertical;
 }
 
-label:has(+ :required)::before
-{
-    content: '* ' / '';
+label:has(+ :required)::before {
+  content: "* " / "";
 }
 
-input:not(:placeholder-shown):valid
-{
-    outline-color: var(--clr-success);
+input:not(:placeholder-shown):valid {
+  outline-color: var(--clr-success);
 }
 
-input:not(:placeholder-shown):invalid
-{
-    outline-color: var(--clr-warning);
+input:not(:placeholder-shown):invalid {
+  outline-color: var(--clr-warning);
 }
 
-.input-group
-{
-    margin: 0.25em;
+.input-group {
+  margin: 0.25em;
 }
 
-.questionnaire .input-group:not(fieldset .radio .input-group)
-{
-    display: flex;
-    align-items: center;
-    gap: 1em;
+.questionnaire .input-group:not(fieldset .radio .input-group) {
+  display: flex;
+  align-items: center;
+  gap: 1em;
 
-    margin: 1em;
+  margin: 1em;
 }
 
-.input-group.terms
-{
-    display: flex;
-    gap: 1em;
-    align-items: center;
+.input-group.terms {
+  display: flex;
+  gap: 1em;
+  align-items: center;
 }
 
-.input-group.terms a
-{
-    padding: 2.5px;
+.input-group.terms a {
+  padding: 2.5px;
 
-    background: var(--clr-bg-light);
+  background: var(--clr-bg-light);
 }
 
-.input-group.terms input
-{
-    width: 1em;
-    height: 1em;
+.input-group.terms input {
+  width: 1em;
+  height: 1em;
 }
 
-form ul
-{
-    margin: 1rem 0;
+form ul {
+  margin: 1rem 0;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2.5%;
-    
-    list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2.5%;
+
+  list-style-type: none;
 }
 
-form button
-{
-    padding: 0.5em 2em;
-    border: 0.25em solid rgb(255, 125, 0);
-    border-radius: 5px;
-    
-    background: darkorange;
-    
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
+form button {
+  padding: 0.5em 2em;
+  border: 0.25em solid rgb(255, 125, 0);
+  border-radius: 5px;
+
+  background: darkorange;
+
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-form button:hover:not([type="reset"])
-{
-    border-color: var(--clr-success);
+form button:hover:not([type="reset"]) {
+  border-color: var(--clr-success);
 }
 
-button:hover[type="reset"]
-{
-    border-color: var(--clr-error);
+button:hover[type="reset"] {
+  border-color: var(--clr-error);
 }
 
-form button:active
-{
-    background: var(--clr-ui);
-    color: white;
+form button:active {
+  background: var(--clr-ui);
+  color: white;
 }
 
-.grid-center
-{
-    display: grid;
-    place-items: center;
+.grid-center {
+  display: grid;
+  place-items: center;
 }
 
-.grid
-{
-    display: grid;
+.grid {
+  display: grid;
 }
 
-dialog
-{
-    width: 20rem;
-    height: 20rem;
+dialog {
+  width: 20rem;
+  height: 20rem;
 
-    grid-template-columns: 1fr;
+  grid-template-columns: 1fr;
 
-    border: none;
+  border: none;
 
-    background: whitesmoke;
+  background: whitesmoke;
 
-    text-align: center;
+  text-align: center;
 }
 
-dialog img
-{
-    width: 100%;
+dialog img {
+  width: 100%;
 }
 
-dialog button
-{
-    width: 2.5em;
-    height: 2.5em;
+dialog button {
+  width: 2.5em;
+  height: 2.5em;
 
-    display: grid;
-    place-items: center;
+  display: grid;
+  place-items: center;
 
-    position: absolute;
-    top: 0;
-    right: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
 
-    border: none;
+  border: none;
 
-    background: var(--clr-ui);
-    color: white;
+  background: var(--clr-ui);
+  color: white;
 }
